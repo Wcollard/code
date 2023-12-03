@@ -1,0 +1,13 @@
+#VIEWS
+from .models import Task
+from django.views import View
+from django.views.generic import ListView, DetailView
+
+class TaskListView(ListView):
+	model: Task
+	template_name =' task/task_list.html'
+
+class TaskDetailView(DetailView):
+	model= Task
+	template_name= 'task/task_detail.html'
+
